@@ -164,7 +164,12 @@ px
     height: 25px;
 }
 
-
+.brand_logo_img {
+    width: 3em;
+    position: relative;
+    left: 1em;
+    border-radius: 2em;
+}
 
 @media screen and (max-width: 480px) {
     
