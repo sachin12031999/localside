@@ -24,13 +24,13 @@
     <style>
         .loader {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 70%;
+            left: 40%;
             transform: translate(-50%, -50%);
-            width: 150px;
-            height: 150px;
+            width: 50px;
+            height: 50px;
             border: 5px solid #f3f3f3;
-            border-top: 5px solid #3498db;
+            border-top: 7px solid #372163;
             border-radius: 50%;
             animation: spin 2s linear infinite;
         }
@@ -39,6 +39,13 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        @media screen and (min-width:900px) { 
+    .loader{
+      display: none;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -51,14 +58,13 @@
         </div>
     </div>
 
-    <!-- <div class="loader"></div> -->
     <section class="back-to-home" >
         <div class="container" style="background-color: #372163; border-radius: 2em;">
-          <div class="row">
-            <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+          <div class="row ">
+            <div class="col-6 col-lg-6 mb-3 mb-lg-0 mt-2 mt-md-0 mt-lg-0">
               <a href="./index.html" class="btn text-white"><i class="fas fa-arrow-left"></i> Back to Home</a>
             </div>
-            <div class="col-12 col-lg-6" >
+            <div class="col-6 col-lg-6 mt-2 mt-md-0 mt-lg-0" >
               <ul class="list-unstyled d-flex justify-content-space align-items-center mt-1 mb-0" style="
               justify-content: space-around;">
                 <li class="me-3"><a href="./about/index.html" class="text-decoration-none">About</a></li>
@@ -69,6 +75,7 @@
           </div>
         </div>
       </section>
+    <div class="loader"></div>
       
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-El0bs0ymfOJ96C+kD+ZJ0GZfLzNU1+fJl1zsbN/zscEGBt70HkZYcCScrof37I0spC/ExYMcY1btIVJWSx4zmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
