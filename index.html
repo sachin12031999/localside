@@ -58,13 +58,55 @@
 
   <title>Medalert Life</title>
 </head>
+<style>
+  #loader {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: #372163;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid rgb(63, 2, 2);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin .1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+body.loaded #loader {
+  display: none;
+}
+
+</style>
+<script>
+  window.addEventListener('load', function() {
+  document.body.classList.add('loaded');
+});
+
+</script>
 <body >
+
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  
+
   <section class="">
     <nav class="navbar  navbar-expand-lg navbar-light bg-danger">
       <div class="container-fluid">
         <a class="navbar-brand fw-bold fs-2  text-uppercase text-white" href="#"> 
-          <img class="navbar-brand mx-5 brand_logo_img" src="./images/logo.png" alt="Medalert Life Logo">Medalert Life</a>
+          <img class="navbar-brand mx-md-5 mx-lg-5 brand_logo_img" src="./images/logo.png" alt="Medalert Life Logo">Medalert Life</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -142,20 +184,20 @@
     </div>
 
     
-			<div id="action-buts">
-				<h1>book an ambulance</h1>
+			<div id="action-buts"  style="background-color: #372163; color: #f3f3f3;">
+				<h1 style="background-color: #643cb5; padding: .3em; color: #f3f3f3;">book an ambulance</h1>
 				<div class="underlines">
 					<div class="line line-inl"></div>
 					<div class="circle line-inl"></div>
 					<div class="line line-inl"></div>
 				</div>
 				<div class="bookform">
-					<form id="indexform">
+					<form id="indexform" >
 						<p class="callus fw-bolder" style="text-align: center; margin-top:0;">Call Now<a
 								href="tel:+919752625048" onclick="gtag_report_conversion()"
 								class="book-form-a text-decoration-none text-danger fs-3 fw-bold">
 								+91 9752 625 048 </a>
-							<br><br>
+							<br>
 							OR
 						</p>
             <font>Inquiry now</font>
@@ -174,7 +216,7 @@
 							<!-- <option>Pet ambulance</option> -->
 							<option>Wheelchair ambulance</option>
 						</select><br>
-						<input class="submitbutton btn btn-info btn-lg" type="button" name="" value="Get A Call Back"
+						<input class="submitbutton btn  btn-lg" style="background-color: #643cb5 ; color: #f3f3f3;" type="button" name="" value="Get A Call Back"
 							id="submit" onclick="sendMail();">
 					</form>
 				</div>
@@ -627,16 +669,16 @@
             Products
           </h6>
           <p>
-            <a href="#!" class="text-reset">About</a>
+            <a href="./about/index.html" class="text-reset">About</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Services</a>
+            <a href="./services/index.html" class="text-reset">Services</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Privacy Policy</a>
+            <a href="./pp/index.html" class="text-reset">Privacy Policy</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Terms and Condition</a>
+            <a href="./tnc/index.html" class="text-reset">Terms and Condition</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -648,16 +690,16 @@
             Useful links
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <a href="error.html" class="text-reset">Pricing</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <a href="error.html" class="text-reset">Settings</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a href="error.html" class="text-reset">Orders</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Help</a>
+            <a href="error.html" class="text-reset">Help</a>
           </p>
         </div>
         <!-- Grid column -->
