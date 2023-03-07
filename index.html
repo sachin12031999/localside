@@ -105,49 +105,67 @@
     /* clip-path: polygon(0% 58.25%, 100% 11.75%, 100% 99%, 0% 100%); */
 background-color: #372163 !important;
   }
-  #loader {
-  position: fixed;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  background-color: #372163;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+#loader-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+	display: none;
 }
 
-.spinner {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid rgb(63, 2, 2);
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin .1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-body.loaded #loader {
-  display: none;
+#loader-container img {
+	display: block;
+	margin: 0 auto;
 }
 
 </style>
 <script>
-  window.addEventListener('load', function() {
-  document.body.classList.add('loaded');
+ $(window).on("load", function() {
+	$("#loader-container").fadeOut("slow");
 });
 
 </script>
 <body >
 
-  <div id="loader">
+  <!-- <div id="loader">
     <div class="spinner"></div>
+  </div> -->
+
+  <div id="loader-container">
+    <img src="https://cdn.dribbble.com/users/730521/screenshots/2679602/media/4c45efdb14649ff971139e06ed5aff59.gif" alt="Loading...">
   </div>
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".navbar-toggler").click(function(){
+      $(".navbar-nav").css("display" , "grid");
+      $(".navbar-toggler-icon").css({"backgroundImage": "url(https://cdn-icons-png.flaticon.com/512/2976/2976286.png)"});
+      // $(".navbar-toggler-icon").removeAttr("style");
+    })
 
+    
+  });
+  // $(document).ready(function(){
+  //   $("navbar-toggler").click(function()
+  //   $(".navbar-toggler-icon").removeAttr("style")
+  //   )}
+</script>
+<script>
+  $(window).scroll(function(){
+    var scroll=$(window).scrollTop()
+      if (scroll> 40) {
+        
+        $(".navbar-nav").removeAttr("style");
+        $(".navbar-toggler-icon").removeAttr("style");
+        $("#action-buts").removeAttr("style");
+        $(".container").css("display" , "block");
+      }
+    }
+  )
+</script>
   <section class="">
     <nav class="navbar  navbar-expand-lg navbar-light bg-danger">
       <div class="container-fluid logo_menu">
@@ -549,7 +567,7 @@ body.loaded #loader {
   <div class="container">
     <div class="row">
       <div class="col-12 d-flex justify-content-around my-1">
-        <h2>Types of Ambulances</h2>
+        <h2 class="text-white">Types of Ambulances avilable</h2>
       </div>
     </div>
     <div class="row">
